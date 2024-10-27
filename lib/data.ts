@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
-import devFlowApp from "@/public/devFLow-app.png";
+import devFlowApp from "@/public/devFlowApp.png";
 
 export const links = [
   {
@@ -89,7 +89,7 @@ export const projectsData = [
     title: "DevFlow app",
     description:
       "A web platform for asking questions about coding problems and sharing solutions",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    tags: ["React", "Next.js", "MongoDB", "Tailwind"],
     imageUrl: devFlowApp,
     link: "https://devflow-nextjs-tailwindcss-typescript.vercel.app/",
   },
