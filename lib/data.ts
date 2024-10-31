@@ -2,8 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
+import next_admin from "@/public/next_admin.png";
+import landing_page from "@/public/landing_page_light_modern.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import devFlowApp from "@/public/devFlowApp.png";
 
@@ -62,33 +62,24 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "NextAdmin",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
-    link: "https://devflow-nextjs-tailwindcss-typescript.vercel.app/",
+      "I created this admin dashboard as a pet project to improve my UI skills.",
+    tags: ["React.Js", "Next.js", "Tailwind", "Typescript"],
+    imageUrl: next_admin,
+    link: "https://nextjs-tailwindcss-admindashboard.vercel.app/",
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
-    link: "https://devflow-nextjs-tailwindcss-typescript.vercel.app/",
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
-    link: "https://devflow-nextjs-tailwindcss-typescript.vercel.app/",
+    title: "Modern Landing Web Page",
+    description: "I created this landing page to improve my UI/UX skills.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Framer-motion"],
+    imageUrl: landing_page,
+    link: "https://light-saas-landing-page-nextjs-tailwindcss-framer-motion.vercel.app/",
   },
   {
     title: "DevFlow app",
     description:
-      "A web platform for asking questions about coding problems and sharing solutions",
+      "A full stack web platform for asking questions about coding problems and sharing solutions",
     tags: ["React", "Next.js", "MongoDB", "Tailwind"],
     imageUrl: devFlowApp,
     link: "https://devflow-nextjs-tailwindcss-typescript.vercel.app/",
