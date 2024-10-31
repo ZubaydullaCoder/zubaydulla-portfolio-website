@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import next_admin from "@/public/next_admin.png";
+import admindashboard from "@/public/admindashboard.png";
 import landing_page from "@/public/landing_page_light_modern.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+
 import devFlowApp from "@/public/devFlowApp.png";
 
 export const links = [
@@ -62,11 +62,11 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "NextAdmin",
+    title: "AdminDashboard",
     description:
       "I created this admin dashboard as a pet project to improve my UI skills.",
     tags: ["React.Js", "Next.js", "Tailwind", "Typescript"],
-    imageUrl: next_admin,
+    imageUrl: admindashboard,
     link: "https://nextjs-tailwindcss-admindashboard.vercel.app/",
   },
   {
