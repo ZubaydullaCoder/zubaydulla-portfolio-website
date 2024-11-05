@@ -4,6 +4,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import Link from "next/link";
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -30,10 +31,16 @@ export default function About() {
         <span className="font-medium">
           React, Next.js, Node.js, and MongoDB
         </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        . I am also familiar with TypeScript and Prisma, and I hold a{" "}
+        <Link
+          href="https://www.testdome.com/certificates/eac7a232c0d14f7d9c80a75a4a972865"
+          className="underline"
+        >
+          React.js certificate from TestDome web platform
+        </Link>
+        . I am always looking to learn new technologies. I am currently looking
+        for a <span className="font-medium">full-time position</span> as a
+        software developer.
       </p>
 
       <p>
