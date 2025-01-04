@@ -24,9 +24,17 @@ export const getConfig = getRequestConfig(async ({ requestLocale }) => {
     };
   } catch (error) {
     console.error(`Failed to load messages for locale:`, error);
-    throw new Error(`Failed to load messages: ${error.message}`);
+    const errorMessage =
+      error instanceof Error ? error.message : "Unknown error occurred";
+    throw new Error(`Failed to load messages: ${errorMessage}`);
   }
 });
 
 export const { Link, redirect, useRouter, usePathname } =
-  createLocalizedPathnamesNavigation({ locales });
+  createLocalizedPathnamesNavigation({
+    locales,
+    pathnames: {
+      "/": "/",
+      "/about": "/about",
+    },
+  });
