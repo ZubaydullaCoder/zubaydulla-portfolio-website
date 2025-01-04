@@ -1,0 +1,76 @@
+{
+  "intro": {
+    "greeting": "Hello, I'm Zubaydulla.",
+    "role": "I'm a React.Js/Next.js developer",
+    "experience": "with 1.5 years of experience",
+    "enjoy": "I enjoy building sites & apps",
+    "focus": "My focus is React (Next.js)",
+    "contactMe": "Contact me here",
+    "downloadCV": "Download CV"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About me",
+    "aboutDescriptionPart1": "After graduating with a degree in Management, I decided to pursue my passion for programming full-stack web development. My favorite part of programming is the problem-solving aspect. I love the feeling of finally figuring out a solution to a problem. My core stack is React, Next.js, Node.js, and MongoDB. I am also familiar with TypeScript and Prisma, and I hold a React.js certificate from ",
+    "testDomeLink": "TestDome web platform",
+    "aboutDescriptionPart2": ". I am currently looking for a full-time position as a software developer. When I'm not coding, I enjoy playing video games, watching movies, and playing with my dog. I also enjoy learning new things. I am currently learning about history and philosophy. I'm also learning how to play the guitar."
+  },
+  "projects": {
+    "title": "My Projects",
+    "projectImageAlt": "Project I worked on",
+    "projectsInfo": {
+      "adminDashboard": {
+        "title": "AdminDashboard",
+        "description": "I created this admin dashboard as a pet project to improve my UI skills."
+      },
+      "devFlowApp": {
+        "title": "DevFlow App",
+        "description": "A full stack web platform for asking questions about coding problems and sharing solutions. Built with React, Next.js, MongoDB and Tailwind."
+      },
+      "modernLanding": {
+        "title": "Modern Landing Web Page",
+        "description": "I created this landing page to improve my UI/UX skills."
+      },
+      "wordanalyticsClone": {
+        "title": "Word Analytics Clone",
+        "description": "A clone of wordanalytics.com. I built this to improve my front-end skills and learn more about Next.js server actions."
+      },
+      "rmtdevClone": {
+        "title": "rmtDev Clone",
+        "description": "Job board for remote developer jobs. Built with React, Node.js, MongoDB and advanced filtering functionality."
+      },
+      "corpcommentClone": {
+        "title": "CorpComment Clone",
+        "description": "A full-stack web application that allows employees to give feedback about companies anonymously."
+      }
+    },
+    "tags": {
+      "react": "React",
+      "next": "Next.js",
+      "typescript": "TypeScript",
+      "tailwind": "Tailwind",
+      "prisma": "Prisma",
+      "mongodb": "MongoDB",
+      "motion": "Motion"
+    },
+    "wordanalyticsClone": {
+      "title": "Word Analytics Clone",
+      "description": "A web app for text analysis and SEO optimization. Processes text in real-time."
+    },
+    "rmtdevClone": {
+      "title": "Rmtdev Clone",
+      "description": "Job board for remote developer jobs. Users can filter by various criteria."
+    },
+    "corpcommentClone": {
+      "title": "CorpComment Clone",
+      "description": "A platform for anonymous company reviews. Features a real-time feed."
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "intro": {
+    "greeting": "Salom, men Zubaydulla.",
+    "role": "Men React.Js/Next.js dasturchiman",
+    "experience": "1.5 yillik tajribaga ega",
+    "enjoy": "Men saytlar va ilovalar yaratishni yaxshi ko'raman",
+    "focus": "Mening asosiy yo'nalishim React (Next.js)",
+    "contactMe": "Men bilan bog'laning",
+    "downloadCV": "CV yuklab olish"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Men haqimda",
+    "projects": "Loyihalar",
+    "skills": "Ko'nikmalar",
+    "experience": "Tajriba",
+    "contact": "Aloqa"
+  },
+  "about": {
+    "title": "Men haqimda",
+    "aboutDescriptionPart1": "Menejment yo'nalishi bo'yicha diplomni olgandan so'ng, dasturlashga bo'lgan qiziqishimni rivojlantirishga qaror qildim. Men bootcamp kurslariga qatnashib full-stack veb-dasturlashni o'rgandim. Dasturlashda menga eng yoqqan narsa bu muammolarni yechish jarayoni. Muammoga yechim topganimda paydo bo'ladigan his-tuyg'ularni yaxshi ko'raman. Mening asosiy texnologiyalarim React, Next.js, Node.js va MongoDB. Shuningdek, men TypeScript va Prisma bilan ham ishlay olaman, va men React.js sertifikatiga egaman ",
+    "testDomeLink": "TestDome veb-platformasi",
+    "aboutDescriptionPart2": "dan. Hozirda men dasturiy ta'minot ishlab chiquvchi sifatida doimiy ish izlayapman. Dasturlash bilan shug'ullanmayotgan paytimda video o'yinlar o'ynashni, kino ko'rishni va itim bilan o'ynashni yaxshi ko'raman. Shuningdek yangi narsalarni o'rganishni yaxshi ko'raman. Hozirda men tarix va falsafa bo'yicha bilimlarimni oshiryapman. Shuningdek, gitara chalishni o'rganyapman."
+  },
+
+  "projects": {
+    "title": "Mening loyihalarim",
+    "projectImageAlt": "Men ishlagan loyiha",
+    "projectsInfo": {
+      "adminDashboard": {
+        "title": "AdminDashboard",
+        "description": "Men ushbu admin panelini UI ko'nikmalarimni oshirish uchun pet-loyiha sifatida yaratdim."
+      },
+      "devFlowApp": {
+        "title": "DevFlow ilovasi",
+        "description": "Dasturlash muammolari haqida savollar berish va yechimlar bo'lishish uchun to'liq stack veb-platforma. React, Next.js, MongoDB va Tailwind yordamida qurilgan."
+      },
+      "modernLanding": {
+        "title": "Zamonaviy Landing Web Sahifa",
+        "description": "Men ushbu landing sahifani UI/UX ko'nikmalarimni oshirish uchun yaratdim."
+      },
+      "rmtdevClone": {
+        "title": "rmtDev Clone",
+        "description": "Masofaviy dasturchilar uchun ish bo'shliqlari portali. React, Node.js, MongoDB va kengaytirilgan filtrlash funksiyalari yordamida qurilgan."
+      },
+      "corpcommentClone": {
+        "title": "CorpComment Clone",
+        "description": "Xodimlarning kompaniyalar haqida anonim ravishda fikr bildirishi mumkin bo'lgan to'liq-stack veb-ilova."
+      }
+    }
+  }
+}

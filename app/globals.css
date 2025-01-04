@@ -1,0 +1,88 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --line-color: #e5e7eb;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+  @apply border border-black/10;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --line-color: #e5e7eb;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}
+
+/* Dark mode styles to match reference project */
+.dark {
+  @apply bg-gray-900 text-gray-50 text-opacity-90;
+}
+
+.dark .bg-white {
+  @apply bg-gray-950;
+}
+
+.dark .bg-white\/80 {
+  @apply bg-gray-950/75;
+}
+
+.dark .text-gray-950 {
+  @apply text-gray-50;
+}
+
+.dark .text-gray-700 {
+  @apply text-gray-200;
+}
+
+.dark .text-gray-500 {
+  @apply text-gray-400;
+}
+
+.dark :is(.border-black\/10) {
+  @apply border-white/10;
+}
+
+.dark .bg-gray-100 {
+  @apply bg-gray-800;
+}
+
+.dark .backdrop-blur-md {
+  @apply bg-gray-950/75;
+}
+
+.dark .hover:text-gray-950 {
+  @apply hover:text-gray-200;
+}
+
+.dark .text-gray-500 {
+  @apply text-gray-400;
+}
+
+.dark .text-gray-700 {
+  @apply text-gray-200;
+}
+
+.dark .text-gray-950 {
+  @apply text-gray-50;
+}
+
+.dark .hover\:text-gray-950:hover {
+  @apply hover:text-gray-200;
+}
