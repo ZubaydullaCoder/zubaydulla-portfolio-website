@@ -1,18 +1,20 @@
 import { getRequestConfig } from "next-intl/server";
-import { createSharedPathnamesNavigation } from "next-intl/navigation";
-import { notFound } from "next/navigation";
+import { createLocalizedPathnamesNavigation } from "next-intl/navigation";
 
-const locales = ["en", "uz"] as const;
-const defaultLocale = "en";
+export const locales = ["en", "uz"] as const;
+export type Locale = (typeof locales)[number];
+export const defaultLocale: Locale = "en";
 
-export default getRequestConfig(async ({ requestLocale }) => {
+export const getConfig = getRequestConfig(async ({ requestLocale }) => {
   try {
-    // Get locale using the new API
-    let locale = await requestLocale;
+    const locale = (await requestLocale) || defaultLocale;
 
-    // Validate and fallback if needed
-    if (!locale || !locales.includes(locale)) {
-      locale = defaultLocale;
+    if (!locales.includes(locale as Locale)) {
+      return {
+        messages: (await import(`./messages/${defaultLocale}.json`)).default,
+        timeZone: "UTC",
+        locale: defaultLocale,
+      };
     }
 
     return {
@@ -21,10 +23,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
       locale,
     };
   } catch (error) {
-    console.error(`Failed to load messages:`, error);
+    console.error(`Failed to load messages for locale:`, error);
     throw new Error(`Failed to load messages: ${error.message}`);
   }
 });
 
 export const { Link, redirect, useRouter, usePathname } =
-  createSharedPathnamesNavigation({ locales });
+  createLocalizedPathnamesNavigation({ locales });
