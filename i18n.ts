@@ -1,40 +1,39 @@
+import { createNavigation } from "next-intl/navigation";
+import { defineRouting } from "next-intl/routing";
 import { getRequestConfig } from "next-intl/server";
-import { createLocalizedPathnamesNavigation } from "next-intl/navigation";
 
 export const locales = ["en", "uz"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "en";
 
-export const getConfig = getRequestConfig(async ({ requestLocale }) => {
-  try {
-    const locale = (await requestLocale) || defaultLocale;
-
-    if (!locales.includes(locale as Locale)) {
-      return {
-        messages: (await import(`./messages/${defaultLocale}.json`)).default,
-        timeZone: "UTC",
-        locale: defaultLocale,
-      };
-    }
-
-    return {
-      messages: (await import(`./messages/${locale}.json`)).default,
-      timeZone: "UTC",
-      locale,
-    };
-  } catch (error) {
-    console.error(`Failed to load messages for locale:`, error);
-    const errorMessage =
-      error instanceof Error ? error.message : "Unknown error occurred";
-    throw new Error(`Failed to load messages: ${errorMessage}`);
-  }
+// Define routing configuration
+export const routing = defineRouting({
+  locales,
+  defaultLocale,
+  pathnames: {
+    "/": "/",
+    "/projects": "/projects",
+    "/about": "/about",
+    "/contact": "/contact",
+  },
 });
 
-export const { Link, redirect, useRouter, usePathname } =
-  createLocalizedPathnamesNavigation({
-    locales,
-    pathnames: {
-      "/": "/",
-      "/about": "/about",
-    },
-  });
+// Create navigation APIs
+export const { Link, redirect, usePathname, useRouter } =
+  createNavigation(routing);
+
+export default getRequestConfig(async ({ requestLocale }) => {
+  // Await the requestLocale and provide a fallback if necessary
+  let locale = await requestLocale;
+
+  // Validate the locale or set it to the default if invalid
+  if (!locale || !routing.locales.includes(locale as any)) {
+    locale = routing.defaultLocale;
+  }
+
+  return {
+    locale,
+    messages: (await import(`./messages/${locale}.json`)).default,
+    timeZone: "UTC",
+  };
+});

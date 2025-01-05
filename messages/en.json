@@ -8,6 +8,39 @@
     "contactMe": "Contact me here",
     "downloadCV": "Download CV"
   },
+  "skills": {
+    "title": "My Skills"
+  },
+  "experience": {
+    "title": "My Experience",
+    "items": {
+      "freelancer": {
+        "title": "Freelance Full-Stack Developer",
+        "location": "Remote",
+        "description": "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities."
+      },
+      "bootcamp": {
+        "title": "Web Development Bootcamp",
+        "location": "Tashkent, Uzbekistan",
+        "description": "I completed an intensive coding bootcamp. I learned full-stack web development including HTML, CSS, JavaScript, React, Node.js and MongoDB."
+      },
+      "economics_and_accounting": {
+        "title": "Economics and Accounting",
+        "location": "Jizzakh Politechnical Institute",
+        "description": "I graduated Bachelors degree on Accounting and Economics."
+      },
+      "udemy_courses": {
+        "title": "Udemy Courses",
+        "location": "Online Learning Platform",
+        "description": "I attended online courses and learnt full stack web development."
+      },
+      "web_developer": {
+        "title": "Web developer",
+        "location": "Codevision.uz IT Park Jizzakh",
+        "description": "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities."
+      }
+    }
+  },
   "nav": {
     "home": "Home",
     "about": "About",
@@ -72,5 +105,22 @@
       "title": "CorpComment Clone",
       "description": "A platform for anonymous company reviews. Features a real-time feed."
     }
+  },
+
+  "contact": {
+    "title": "Contact me",
+    "description": "Please contact me directly at <email>zubaydullacoder@gmail.com</email> or through this form.",
+    "form": {
+      "emailPlaceholder": "Your email",
+      "messagePlaceholder": "Your message",
+      "submitButton": "Send",
+      "success": "Email sent successfully!",
+      "error": "Something went wrong!"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Zubaydulla. All rights reserved.",
+    "aboutWebsite": "About this website:",
+    "techStack": "built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting."
   }
 }

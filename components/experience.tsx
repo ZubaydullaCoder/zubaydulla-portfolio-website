@@ -10,17 +10,19 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { useTranslations } from "next-intl";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
+  const t = useTranslations("experience");
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>My experience</SectionHeading>
+      <SectionHeading>{t("title")}</SectionHeading>
       <VerticalTimeline lineColor="">
-        {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
+        {experiencesData.map((item) => (
+          <React.Fragment key={item.id}>
             <VerticalTimelineElement
               contentStyle={{
                 background:
@@ -33,8 +35,8 @@ export default function Experience() {
               contentArrowStyle={{
                 borderRight:
                   theme === "light"
-                    ? "0.4rem solid #e1e3e9"
-                    : "0.4rem solid rgba(98, 98, 98, 0.7)",
+                    ? "0.4rem solid #9ca3af"
+                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
               icon={item.icon}
@@ -42,13 +44,16 @@ export default function Experience() {
                 background:
                   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
                 fontSize: "1.5rem",
-                color: theme === "light" ? "#1f2937" : "#dcdcdcf8",
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
+              <h3 className="font-semibold capitalize">
+                {t(`items.${item.id}.title`)}
+              </h3>
+              <p className="font-normal !mt-0">
+                {t(`items.${item.id}.location`)}
+              </p>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
+                {t(`items.${item.id}.description`)}
               </p>
             </VerticalTimelineElement>
           </React.Fragment>

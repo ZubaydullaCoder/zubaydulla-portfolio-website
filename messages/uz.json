@@ -1,12 +1,45 @@
 {
   "intro": {
-    "greeting": "Salom, men Zubaydulla.",
-    "role": "Men React.Js/Next.js dasturchiman",
-    "experience": "1.5 yillik tajribaga ega",
-    "enjoy": "Men saytlar va ilovalar yaratishni yaxshi ko'raman",
+    "greeting": "Salom, mening ismim Zubaydulla.",
+    "role": "Men web ilovalar bo'yicha dasturchiman.",
+    "experience": "1.5 yillik tajribaga egaman.",
+    "enjoy": "Men saytlar va ilovalar yaratishdan zavqlanaman.",
     "focus": "Mening asosiy yo'nalishim React (Next.js)",
     "contactMe": "Men bilan bog'laning",
     "downloadCV": "CV yuklab olish"
+  },
+  "skills": {
+    "title": "Mening ko'nikmalarim"
+  },
+  "experience": {
+    "title": "Mening tajribam",
+    "items": {
+      "freelancer": {
+        "title": "Frilanser Full-Stack dasturchi",
+        "location": "Masofaviy",
+        "description": "Hozirda men frilanser sifatida full-stack dasturchi bo'lib ishlayman. Mening texnologiyalarim React, Next.js, TypeScript, Tailwind, Prisma va MongoDB ni o'z ichiga oladi. Men doimiy ish imkoniyatlariga ochiqman."
+      },
+      "bootcamp": {
+        "title": "Veb dasturlash bootcamp",
+        "location": "Toshkent, O'zbekiston",
+        "description": "Men intensiv kodlash bootcampini yakunladim. Men HTML, CSS, JavaScript, React, Node.js va MongoDB ni o'z ichiga olgan to'liq stack veb-dasturlashni o'rgandim."
+      },
+      "economics_and_accounting": {
+        "title": "Iqtisodiyot",
+        "location": "Jizzakh Politexnika Instituti",
+        "description": "Iqtisodiyot va buxgalteriya hisobi bo‘yicha bakalavr darajasini tamomlaganman."
+      },
+      "udemy_courses": {
+        "title": "Udemy Courses",
+        "location": "Online Learning Platform",
+        "description": "Men onlayn kurslarda qatnashib, full-stack veb-dasturlashni o‘rgandim."
+      },
+      "web_developer": {
+        "title": "Web dasturchi",
+        "location": "Codevision.uz IT Park Jizzakh",
+        "description": "Men hozirda full-stack dasturchi sifatida freelancer bo‘lib ishlayman. Mening texnologiyalar to‘plamimga React, Next.js, TypeScript, Tailwind, Prisma va MongoDB kiradi. To‘liq shtatdagi imkoniyatlarga ochiqman."
+      }
+    }
   },
   "nav": {
     "home": "Bosh sahifa",
@@ -48,5 +81,21 @@
         "description": "Xodimlarning kompaniyalar haqida anonim ravishda fikr bildirishi mumkin bo'lgan to'liq-stack veb-ilova."
       }
     }
+  },
+  "contact": {
+    "title": "Aloqa Uchun",
+    "description": "Men bilan to'g'ridan-to'g'ri <email>zubaydullacoder@gmail.com</email> orqali yoki quyidagi forma orqali bog'lanishingiz mumkin.",
+    "form": {
+      "emailPlaceholder": "Elektron pochtangiz",
+      "messagePlaceholder": "Xabaringiz",
+      "submitButton": "Yuborish",
+      "success": "Xabar muvaffaqiyatli yuborildi!",
+      "error": "Xatolik yuz berdi!"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Zubaydulla. Barcha huquqlar himoyalangan.",
+    "aboutWebsite": "Veb-sayt haqida:",
+    "techStack": "React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting yordamida yaratilgan."
   }
 }

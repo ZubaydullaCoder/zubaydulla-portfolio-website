@@ -36,25 +36,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Economics and Accounting",
-    location: "Jizzakh Politechnical Institute",
-    description: "I graduated Bachelors degree on Accounting and Management.",
+    // title: "Economics and Accounting",
+    // location: "Jizzakh Politechnical Institute",
+    // description: "I graduated Bachelors degree on Accounting and Management.",
+    id: "economics_and_accounting",
     icon: React.createElement(LuGraduationCap),
     date: "2020",
   },
   {
-    title: "Udemy Courses",
-    location: "Online Learning Platform",
-    description:
-      "I attended online courses and learnt full stack web development",
+    // title: "Udemy Courses",
+    // location: "Online Learning Platform",
+    // description:
+    // "I attended online courses and learnt full stack web development",
+    id: "udemy_courses",
     icon: React.createElement(CgWorkAlt),
     date: "2020 - 2021",
   },
   {
-    title: "Web developer",
-    location: "Codevision.uz IT Park Jizzakh",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+    // title: "Web developer",
+    // location: "Codevision.uz IT Park Jizzakh",
+    // description:
+    // "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+    id: "web_developer",
     icon: React.createElement(FaReact),
     date: "2021 - 2023",
   },
@@ -98,3 +101,7 @@ export const skillsData = [
   "PostgreSQL",
   "Framer Motion",
 ] as const;
+
+export const contactData = {
+  email: "zubaydullacoder@gmail.com",
+} as const;
