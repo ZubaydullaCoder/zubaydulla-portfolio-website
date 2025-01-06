@@ -20,7 +20,7 @@ export default function Header() {
     <header className="z-[999] relative">
       <motion.div
         className={clsx(
-          "fixed mt-2 mx-2 sm:m-0 top-0 left-1/2 h-[4.5rem] w-full rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75",
+          "fixed mt-2 mr-2 sm:m-0 top-0 left-1/2 h-[4.5rem] w-[90%] rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75",
           {
             "sm:w-[35.5rem]": locale === "en",
             "sm:w-[37.5rem] md:w-[40rem]": locale === "uz",
@@ -31,7 +31,7 @@ export default function Header() {
       ></motion.div>
 
       <nav
-        className={`flex fixed top-[0.8rem] left-1/2 -translate-x-1/2 py-2 mx-4 sm:top-[1.7rem] xl:h-[initial] sm:mx-0 sm:py-0`}
+        className={`flex fixed top-[0.8rem] left-1/2 -translate-x-1/2 py-2 pr-0 sm:top-[1.7rem] xl:h-[initial] sm:mx-0 sm:py-0`}
       >
         <div className="flex flex-col items-end gap-3">
           <ul
@@ -39,7 +39,7 @@ export default function Header() {
               "flex flex-wrap items-center h-8 sm:h-full justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:flex-nowrap",
               {
                 "w-[22rem] sm:w-[initial] sm:gap-5": locale === "en",
-                "w-[27rem] sm:w-auto sm:gap-2 md:gap-4": locale === "uz",
+                "w-[25rem] sm:w-auto sm:gap-2 md:gap-4": locale === "uz",
               }
             )}
           >
@@ -87,7 +87,7 @@ export default function Header() {
           </div>
         </div>
       </nav>
-      <div className="fixed top-[5.5rem] sm:hidden right-2 w-fit xl:hidden">
+      <div className="fixed top-[5.5rem] sm:hidden right-8 w-fit xl:hidden">
         <LanguageSwitcher />
       </div>
     </header>
