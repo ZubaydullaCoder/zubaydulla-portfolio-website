@@ -43,10 +43,13 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="fixed top-8 right-20 z-[999]" ref={dropdownRef}>
+    <div
+      className="relative xl:fixed xl:top-8 xl:right-20 xl:z-[999]"
+      ref={dropdownRef}
+    >
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1 justify-between h-[4.5rem] sm:h-[2.2rem] w-full rounded-none sm:rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] px-4 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+        className="flex items-center gap-1 justify-between h-[2.2rem] w-full rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] px-4 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
@@ -71,7 +74,7 @@ export default function LanguageSwitcher() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-auto right-0 mt-2 w-auto min-w-[140px] bg-white dark:bg-gray-800 rounded-full shadow-xl py-[2px] overflow-hidden"
+            className="absolute top-auto right-0 mt-2 w-auto min-w-[140px] bg-white bg-opacity-80 dark:bg-gray-800 rounded-full shadow-xl py-[2px] overflow-hidden"
           >
             {languages.map((language) => (
               <motion.button

@@ -29,7 +29,10 @@ export default async function RootLayout({
 
         <ClientProviders locale={locale} messages={messages}>
           <Header />
-          <LanguageSwitcher />
+          <div className="xl:flex hidden">
+            <LanguageSwitcher />
+          </div>
+
           {children}
           <Footer />
           <Toaster position="top-right" />

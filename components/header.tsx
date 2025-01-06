@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import LanguageSwitcher from "./language-switcher";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -19,64 +20,76 @@ export default function Header() {
     <header className="z-[999] relative">
       <motion.div
         className={clsx(
-          "fixed top-0 left-1/2 h-[4.5rem] w-full rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75",
+          "fixed mt-2 mx-2 sm:m-0 top-0 left-1/2 h-[4.5rem] w-full rounded-full border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75",
           {
-            "sm:w-[36rem]": locale === "en",
-            "sm:w-[42rem]": locale === "uz",
+            "sm:w-[35.5rem]": locale === "en",
+            "sm:w-[37.5rem] md:w-[40rem]": locale === "uz",
           }
         )}
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul
-          className={clsx(
-            "flex flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:flex-nowrap",
-            {
-              "w-[22rem] sm:w-[initial] sm:gap-5": locale === "en",
-              "w-[28rem] sm:w-[initial] sm:gap-4": locale === "uz",
-            }
-          )}
-        >
-          {links.map((link) => (
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-300",
-                  {
-                    "text-gray-950 dark:text-gray-100":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
+      <nav
+        className={`flex fixed top-[0.8rem] left-1/2 -translate-x-1/2 py-2 mx-4 sm:top-[1.7rem] xl:h-[initial] sm:mx-0 sm:py-0`}
+      >
+        <div className="flex flex-col items-end gap-3">
+          <ul
+            className={clsx(
+              "flex flex-wrap items-center h-8 sm:h-full justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:flex-nowrap",
+              {
+                "w-[22rem] sm:w-[initial] sm:gap-5": locale === "en",
+                "w-[27rem] sm:w-auto sm:gap-2 md:gap-4": locale === "uz",
+              }
+            )}
+          >
+            {links.map((link) => (
+              <motion.li
+                className="h-3/4 flex items-center justify-center relative"
+                key={link.hash}
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
               >
-                {t(link.name.toLowerCase())}
-                {link.name === activeSection && (
-                  <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
+                <Link
+                  className={clsx(
+                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-50",
+                    {
+                      "text-gray-950 dark:text-gray-50":
+                        activeSection === link.name,
+                      "sm:whitespace-nowrap":
+                        link.name === "Home" || link.name === "About",
+                    }
+                  )}
+                  href={link.hash}
+                  onClick={() => {
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                  }}
+                >
+                  {t(link.name.toLowerCase())}
+                  {link.name === activeSection && (
+                    <motion.span
+                      className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
+                    ></motion.span>
+                  )}
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+          <div className="hidden sm:flex xl:hidden">
+            <LanguageSwitcher />
+          </div>
+        </div>
       </nav>
+      <div className="fixed top-[5.5rem] sm:hidden right-2 w-fit xl:hidden">
+        <LanguageSwitcher />
+      </div>
     </header>
   );
 }
