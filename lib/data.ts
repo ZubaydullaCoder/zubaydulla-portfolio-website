@@ -54,9 +54,9 @@ export const experiencesData = [
     title: "Web developer",
     location: "Codevision.uz IT Park Jizzakh",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I build full-stack web applications with React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I focus on practical, user-friendly interfaces and scalable web app development.",
     icon: React.createElement(FaReact),
-    date: "2021 - 2023",
+    date: "2021 - Present",
   },
 ] as const;
 
